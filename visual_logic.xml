@@ -1,0 +1,122 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="20" scrolly="0" scale="0.9"></tab>
+  <tab name="New Tab" type="CommonTab" active="false" scrollx="20" scrolly="0" scale="0.9"></tab>
+  <tab name="externalFunction" type="CommonTab" active="false" scrollx="2.2737367544323206e-13" scrolly="-79.49999999999989" scale="1">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="~u2(B:~XbbKvQm,9ch4z" inline="false" x="350" y="390">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="-N6mn1$[1_d@2#u0zLw-">
+          <field name="FIELDNAME">Cube</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="callJSFunction" id="vnY(Gf~+7~/_dNO[pLCm">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" name="externalFunction">
+            <arg name="x"></arg>
+            <arg name="y"></arg>
+          </mutation>
+          <field name="NAME">externalFunction</field>
+          <value name="ARG0">
+            <block type="text" id="$O1c|8mx,H:n{3z$XcG%">
+              <field name="TEXT">这个是一个内部</field>
+            </block>
+          </value>
+          <value name="ARG1">
+            <block type="text" id="kV)pAg5K1e0@4WKZang@">
+              <field name="TEXT">模型</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <tab name="interiorFunction" type="CommonTab" active="true" scrollx="-31.428710937499773" scrolly="-307.8572387695312" scale="1">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="hF/c))W2peWVq7dnLyos">state</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="TKv1+NN$_J;``E-;Q0Y=" x="550" y="610">
+      <mutation>
+        <arg name="state" varid="hF/c))W2peWVq7dnLyos"></arg>
+      </mutation>
+      <field name="NAME">interiorFunction</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="controls_if" id="0..:asNvOV3}i0OW0(g~">
+          <mutation elseif="1"></mutation>
+          <value name="IF0">
+            <block type="logic_compare" id="j4YayD$[Avd$!DEVMs)G">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="variables_get" id="nB..6M3hM]+qS5/l-Imv">
+                  <field name="VAR" id="hF/c))W2peWVq7dnLyos">state</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="text" id="Zy06C1b!!klh+nV$N:Oq">
+                  <field name="TEXT">show</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="show" id="tAxFSSidCO1/;PlE+m6R">
+              <value name="VALUE">
+                <shadow type="objectList" id="di{Mzr8oSY0z+DKA7=UD">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="objectList" id="}?X~lD^j.}0-^]();bhq">
+                  <field name="FIELDNAME">Cube</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+          <value name="IF1">
+            <block type="logic_compare" id="4Y*9=[`*xVPob6GC=p=5">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="variables_get" id="bv*1_^5i.4$t5joHG1tg">
+                  <field name="VAR" id="hF/c))W2peWVq7dnLyos">state</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="text" id="U`aAe`k7pB32a_R6f{O8">
+                  <field name="TEXT">hide</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO1">
+            <block type="hide" id="+%6ValtNKF?3R%E|T|8h">
+              <value name="VALUE">
+                <shadow type="objectList" id="~j:R^o##ZeSKKL3V*NE]">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="objectList" id="w$wgA*xxJmn9a6:TaST_">
+                  <field name="FIELDNAME">Cube</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+          <next>
+            <block type="console.log" id="amZ^JkN!oAhQNr]MS;0v">
+              <value name="VALUE">
+                <shadow type="text" id="=M!2Q?@b[lcyAdp=?ryQ">
+                  <field name="TEXT">Hello, Verge!</field>
+                </shadow>
+                <block type="variables_get" id="aUYeRH-iA_NS!zKaz$0k">
+                  <field name="VAR" id="hF/c))W2peWVq7dnLyos">state</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1622.3999999999999" viewport-y="37" viewport-w="1093.6" viewport-h="679.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

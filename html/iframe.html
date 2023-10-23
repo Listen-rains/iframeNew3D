@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>myiframe</title>
+
+
+  <link rel="stylesheet" type="text/css" href="../css/iframe.css">
+
+</head>
+<body>
+  <div class="main">
+      
+    <iframe id="ifrId" src="../index.html"></iframe>
+
+  </div>
+
+  <div class="button-contents">
+
+    <div id="but1" class="buttons">show</div>
+    <div id="but2" class="buttons">hide</div>
+
+  </div>
+
+  <script type="text/javascript">
+    
+    var myifr = document.querySelector('#ifrId')
+
+    var mybutton = document.querySelector('.button-contents')
+
+    var mywindow = myifr.window || myifr.contentWindow
+
+
+    mybutton.addEventListener('mousedown', clickButton, false)
+
+
+    function clickButton (event) {
+
+      var childElementId = event.target.id
+
+      if (childElementId == 'but1') {
+
+
+        mywindow.setModel('show')
+
+      }else if (childElementId == 'but2') {
+
+        mywindow.setModel('hide')
+
+      }
+      console.log(childElementId)
+
+    }
+
+
+    // setTimeout(function () {
+
+    //   mywindow.setModel('hide')
+    // },1000)
+
+
+
+  </script>
+
+</body>
+</html>
